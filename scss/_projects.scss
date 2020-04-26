@@ -1,10 +1,21 @@
 .projects-section {
   padding: 10rem 0;
+  background-color: $white;
+  .container{
+    .card{
+      img{
+        opacity: 0.7;
+      }
+      img:hover{
+        opacity: 1;
+      }
+    }
+  }
   .featured-text {
     padding: 2rem;
     @media (min-width: 992px) {
       padding: 0 0 0 2rem;
-      border-left: 0.5rem solid $primary;
+      border-left: 0.5rem solid $blue;
     }
   }
   .project-text {
@@ -13,10 +24,83 @@
     @media (min-width: 992px) {
       padding: 5rem;
       hr {
-        border-color: $primary;
+        border-color: $blue;
         border-width: .25rem;
         width: 30%;
       }
     }
   }
+  .container, .bg-light{
+    background-color: $white;    
+  }
+
+  .bg-partner{
+    opacity: 0.8;
+    
+    .card-footer{
+      // padding-top: 90%;
+      color: $black;
+      font-weight: bolder;
+      background-color: $white;
+    }
+  }
+
+  .bg-partner:hover{
+    opacity: 1.0;
+  }
+  .bg-hospital{
+    // background: linear-gradient(to bottom, #{fade-out($blue, .7)} 0%,#{fade-out($blue, .3)} 75%,$blue 100%), url('../img/partners/thumbs/hospitals.jpg');
+    background:  url('../img/partners/thumbs/hospitals.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  .bg-care-taking{
+    // background: linear-gradient(to bottom, #{fade-out($blue, .7)} 0%,#{fade-out($blue, .3)} 75%,$blue 100%), url('../img/partners/thumbs/hospitals.jpg');
+    background:  url('../img/partners/thumbs/care-taking.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  .bg-associations{
+    // background: linear-gradient(to bottom, #{fade-out($blue, .7)} 0%,#{fade-out($blue, .3)} 75%,$blue 100%), url('../img/partners/thumbs/hospitals.jpg');
+    background:  url('../img/partners/thumbs/associations.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  .bg-logistc{
+    // background: linear-gradient(to bottom, #{fade-out($blue, .7)} 0%,#{fade-out($blue, .3)} 75%,$blue 100%), url('../img/partners/thumbs/hospitals.jpg');
+    background:  url('../img/partners/thumbs/logistics.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  .bg-pharmacy{
+    // background: linear-gradient(to bottom, #{fade-out($blue, .7)} 0%,#{fade-out($blue, .3)} 75%,$blue 100%), url('../img/partners/thumbs/hospitals.jpg');
+    background:  url('../img/partners/thumbs/pharmacy.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  .bg-gvnmt{
+    // background: linear-gradient(to bottom, #{fade-out($blue, .7)} 0%,#{fade-out($blue, .3)} 75%,$blue 100%), url('../img/partners/thumbs/hospitals.jpg');
+    background:  url('../img/partners/thumbs/goverment.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+
 }

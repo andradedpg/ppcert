@@ -1,7 +1,23 @@
 .about-section {
   padding-top: 10rem;
-  background: linear-gradient(to bottom, $black 0%,#{fade-out($black, .1)} 75%,#{fade-out($black, .2)} 100%);
+  background: linear-gradient(to bottom, $blue 0%,#{fade-out($blue, .1)} 75%,#{fade-out($blue, .2)} 100%);
   p {
     margin-bottom: 5rem;
   }
 }
+
+.md-bg-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 22rem;
+  padding: 15rem 0;
+  // background image is royalities free: https://www.pexels.com/pt-br/foto/mulher-mesa-balcao-computador-portatil-3758765/ -->
+  background: url('../img/md-search-horizontal.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  opacity: 0.5;
+}
+

@@ -1,7 +1,7 @@
 /*!
- * Start Bootstrap - Grayscale v5.0.9 (https://startbootstrap.com/template-overviews/grayscale)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
+ * Start Bootstrap - Pplcert v0.0.1 (https://pplcert.org)
+ * Copyright 2013-2020 Daniel Andradee
+ * Licensed under MIT (https://github.com/BlackrockDigital/pplcert-hotsite/blob/master/LICENSE)
  */
 
 #mainNav {
@@ -12,8 +12,8 @@
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  color: #00AEF0;
+  border: 1px solid #00AEF0;
 }
 
 #mainNav .navbar-toggler:focus {
@@ -21,7 +21,7 @@
 }
 
 #mainNav .navbar-brand {
-  color: #161616;
+  color: #fff;
   font-weight: 700;
   padding: .9rem 0;
 }
@@ -52,10 +52,10 @@
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(22, 22, 22, 0.5);
   }
   #mainNav .nav-link:active {
     color: white;
@@ -72,15 +72,15 @@
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    color: #00AEF0;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: #0077a4;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: #00AEF0;
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid #00AEF0;
   }
 }
 
@@ -90,7 +90,7 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(0, 174, 240, 0.3) 0%, rgba(0, 174, 240, 0.7) 75%, #00AEF0 100%), url("../img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -98,7 +98,7 @@
 }
 
 .masthead h1 {
-  font-family: 'Varela Round';
+  font-family: 'Century Gothic';
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
@@ -162,17 +162,59 @@
   background-color: #467370 !important;
 }
 
+.btn-secondary {
+  color: #161616;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #0089bd;
+}
+
+.btn-secondary:focus {
+  background-color: #0089bd;
+  color: white;
+}
+
+.btn-secondary:active {
+  background-color: #0077a4 !important;
+}
+
 .about-section {
   padding-top: 10rem;
-  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+  background: linear-gradient(to bottom, #00AEF0 0%, rgba(0, 174, 240, 0.9) 75%, rgba(0, 174, 240, 0.8) 100%);
 }
 
 .about-section p {
   margin-bottom: 5rem;
 }
 
+.md-bg-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 22rem;
+  padding: 15rem 0;
+  background: url("../img/md-search-horizontal.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  opacity: 0.5;
+}
+
 .projects-section {
   padding: 10rem 0;
+  background-color: #fff;
+}
+
+.projects-section .container .card img {
+  opacity: 0.7;
+}
+
+.projects-section .container .card img:hover {
+  opacity: 1;
 }
 
 .projects-section .featured-text {
@@ -182,7 +224,7 @@
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
+    border-left: 0.5rem solid #00AEF0;
   }
 }
 
@@ -196,22 +238,88 @@
     padding: 5rem;
   }
   .projects-section .project-text hr {
-    border-color: #64a19d;
+    border-color: #00AEF0;
     border-width: .25rem;
     width: 30%;
   }
 }
 
-.signup-section {
-  padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
+.projects-section .container, .projects-section .bg-light {
+  background-color: #fff;
+}
+
+.projects-section .bg-partner {
+  opacity: 0.8;
+}
+
+.projects-section .bg-partner .card-footer {
+  color: #161616;
+  font-weight: bolder;
+  background-color: #fff;
+}
+
+.projects-section .bg-partner:hover {
+  opacity: 1.0;
+}
+
+.projects-section .bg-hospital {
+  background: url("../img/partners/thumbs/hospitals.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
 
-.signup-section .form-inline input {
+.projects-section .bg-care-taking {
+  background: url("../img/partners/thumbs/care-taking.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.projects-section .bg-associations {
+  background: url("../img/partners/thumbs/associations.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.projects-section .bg-logistc {
+  background: url("../img/partners/thumbs/logistics.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.projects-section .bg-pharmacy {
+  background: url("../img/partners/thumbs/pharmacy.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.projects-section .bg-gvnmt {
+  background: url("../img/partners/thumbs/goverment.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.signup-section {
+  padding: 10rem 0;
+  background: linear-gradient(to bottom, rgba(0, 174, 240, 0.1) 0%, rgba(0, 174, 240, 0.5) 75%, #00AEF0 100%), url("../img/contact.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.signup-section .form input, .signup-section .form select, .signup-section .form textarea {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
   height: auto;
@@ -222,8 +330,48 @@
   border: 0;
 }
 
-.contact-section {
-  padding: 5rem 0 0;
+.team-section {
+  position: relative;
+  width: 100%;
+  padding: 15rem 0;
+  background-color: #00AEF0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.team-section h2 {
+  font-family: 'Century Gothic';
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+@media (min-width: 768px) {
+  .team-section h2 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .team-section {
+    padding: 0;
+  }
+  .team-section h2 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    letter-spacing: 0.8rem;
+  }
+}
+
+.team-section div.card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
 }
 
 .contact-section .card {
@@ -233,7 +381,7 @@
 
 .contact-section .card h4 {
   font-size: 0.8rem;
-  font-family: 'Varela Round';
+  font-family: 'Century Gothic';
   text-transform: uppercase;
   letter-spacing: 0.15rem;
 }
@@ -242,10 +390,6 @@
   border-color: #64a19d;
   border-width: 0.25rem;
   width: 3rem;
-}
-
-.contact-section .social {
-  margin-top: 5rem;
 }
 
 .contact-section .social a {
@@ -267,7 +411,7 @@
 }
 
 body {
-  font-family: 'Nunito';
+  font-family: 'Century Gothic';
   letter-spacing: 0.0625em;
 }
 

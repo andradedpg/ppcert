@@ -1,12 +1,12 @@
 .signup-section {
   padding: 10rem 0;
-  background: linear-gradient(to bottom, #{fade-out($black, .9)} 0%,#{fade-out($black, .5)} 75%,$black 100%), url('../img/bg-signup.jpg');
+  background: linear-gradient(to bottom, #{fade-out($blue, .9)} 0%,#{fade-out($blue, .5)} 75%,$blue 100%), url('../img/contact.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  .form-inline {
-    input {
+  .form {
+    input, select, textarea {
       box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0,0,0,.1) !important;
       padding: 1.25rem 2rem;
       height: auto;
@@ -16,5 +16,52 @@
       letter-spacing: 0.15rem;
       border: 0;
     }
+  }
+}
+
+.team-section {
+  position: relative;
+  width: 100%;
+  // height: auto;
+  // min-height: 35rem;
+  padding: 15rem 0;
+  // background image is royalities free: https://www.pexels.com/pt-br/foto/close-vista-de-perto-cooperacao-colaboracao-3985163/
+  // background: linear-gradient(to bottom, #{fade-out($blue, .7)} 0%,#{fade-out($blue, .3)} 75%,$blue 100%), url('../img/team.jpg');
+  // background: linear-gradient(to bottom, #{fade-out($blue, .7)} 0%,#{fade-out($blue, .3)} 75%,$blue 100%);
+  // background: url('../img/team.jpg');
+  background-color: $blue;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  h2 {
+    font-family: 'Century Gothic';
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.8rem;
+    background: -webkit-linear-gradient(fade-out(white, 0.1), fade-out(white, 1));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  
+  @media(min-width: 768px) {
+    h2 {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+  }
+  @media(min-width: 992px) {
+    // height: 100vh;
+    padding: 0;
+    h2 {
+      font-size: 4.5rem;
+      line-height: 4.5rem;
+      letter-spacing: 0.8rem;
+    }
+  }
+
+  div.card{
+    background-color: rgba(255,255,255, 0);
+    border: none;
   }
 }
