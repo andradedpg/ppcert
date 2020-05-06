@@ -26,6 +26,11 @@
   padding: .9rem 0;
 }
 
+#mainNav .navbar-nav {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
 #mainNav .navbar-nav .nav-item:hover {
   color: fade(white, 80%);
   outline: none;
@@ -182,12 +187,17 @@
 }
 
 .about-section {
+  font-family: Arial, Helvetica, sans-serif;
   padding-top: 10rem;
   background: linear-gradient(to bottom, #00AEF0 0%, rgba(0, 174, 240, 0.9) 75%, rgba(0, 174, 240, 0.8) 100%);
 }
 
 .about-section p {
   margin-bottom: 5rem;
+}
+
+.about-section ulli {
+  background-color: #00AEF0;
 }
 
 .md-bg-section {
@@ -207,6 +217,7 @@
 .projects-section {
   padding: 10rem 0;
   background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .projects-section .container .card img {
@@ -311,6 +322,7 @@
 }
 
 .signup-section {
+  font-family: Arial, Helvetica, sans-serif;
   padding: 10rem 0;
   background: linear-gradient(to bottom, rgba(0, 174, 240, 0.1) 0%, rgba(0, 174, 240, 0.5) 75%, #00AEF0 100%), url("../img/contact.jpg");
   background-position: center;
@@ -319,19 +331,102 @@
   background-size: cover;
 }
 
+.signup-section .form {
+  /* basic css styling ------------------------------- */
+  /* hide the checkbox */
+  /* checkbox css ------------------------------------ */
+  /* show a cursor when we hover */
+  /* style all of our span tags with position absolute and over to the left */
+  /* style our circle and position it */
+  /* style our box */
+  /* style the check. give it a border on the bottom and right only and then rotate */
+  /* rotate and then hide our box */
+  /* rotate and show our check */
+}
+
 .signup-section .form input, .signup-section .form select, .signup-section .form textarea {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
   height: auto;
-  font-family: 'Varela Round';
+  font-family: 'Arial, Helvetica, sans-serif';
   font-size: 80%;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   border: 0;
 }
 
+.signup-section .form input[type=checkbox] {
+  display: none;
+}
+
+.signup-section .form label, .signup-section .form p {
+  padding-left: 50px;
+}
+
+.signup-section .form #check-awesome {
+  position: relative;
+  padding-top: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  min-height: 40px;
+}
+
+.signup-section .form label {
+  cursor: pointer;
+}
+
+.signup-section .form label span {
+  display: block;
+  position: absolute;
+  left: 20px;
+  transition-duration: 0.3s;
+}
+
+.signup-section .form label .circle {
+  background: #FFF;
+  left: -30px;
+  top: -30px;
+  height: 80px;
+  width: 80px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.signup-section .form label .box {
+  border: 2px solid #000;
+  height: 20px;
+  width: 20px;
+  z-index: 888;
+  transition-delay: 0.2s;
+}
+
+.signup-section .form label .check {
+  top: 5px;
+  left: 20px;
+  width: 12px;
+  height: 24px;
+  border: 2px solid #0f9d58;
+  border-top: none;
+  border-left: none;
+  opacity: 0;
+  z-index: 888;
+  transform: rotate(180deg);
+  transition-delay: 0.3s;
+}
+
+.signup-section .form input[type=checkbox]:checked ~ label .box {
+  opacity: 0;
+  transform: scale(0) rotate(-180deg);
+}
+
+.signup-section .form input[type=checkbox]:checked ~ label .check {
+  opacity: 1;
+  transform: scale(1) rotate(45deg);
+}
+
 .team-section {
   position: relative;
+  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   padding: 15rem 0;
   background-color: #00AEF0;
@@ -374,6 +469,10 @@
   border: none;
 }
 
+.contact-section {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .contact-section .card {
   border: 0;
   border-bottom: 0.25rem solid #64a19d;
@@ -381,7 +480,6 @@
 
 .contact-section .card h4 {
   font-size: 0.8rem;
-  font-family: 'Century Gothic';
   text-transform: uppercase;
   letter-spacing: 0.15rem;
 }
@@ -410,8 +508,30 @@
   color: #fff;
 }
 
+.media-section {
+  padding: 10rem 0;
+}
+
+.media-section .carousel-inner {
+  color: 'black';
+}
+
+.media-section .carousel-inner img {
+  opacity: 0.9;
+}
+
+.media-section a {
+  color: #161616;
+}
+
+.media-section a:hover, .media-section a:active {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #161616;
+}
+
 body {
-  font-family: 'Century Gothic';
+  font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 0.0625em;
 }
 

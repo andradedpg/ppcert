@@ -1,8 +1,15 @@
 .about-section {
+  font-family: Arial, Helvetica, sans-serif;
   padding-top: 10rem;
   background: linear-gradient(to bottom, $blue 0%,#{fade-out($blue, .1)} 75%,#{fade-out($blue, .2)} 100%);
   p {
     margin-bottom: 5rem;
+  }
+
+  ul{
+    &li{
+      background-color: $blue;
+    }
   }
 }
 

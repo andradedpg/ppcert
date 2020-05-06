@@ -1,0 +1,21 @@
+.media-section {
+  padding: 10rem 0;
+  
+  .carousel-inner{
+    img{
+      opacity: 0.9;
+    }
+    color: 'black';
+  }
+
+  a{
+    color: $black;
+  }
+
+  a:hover, a:active{
+    text-decoration-line: underline;
+    color: $black;
+  }
+  
+ 
+}

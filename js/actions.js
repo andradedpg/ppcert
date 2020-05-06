@@ -7,18 +7,25 @@ var sendmail = function(){
 
     if(name != '' && email != '' && phone != ''){
         Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "dandrade.dev@gmail.com",
-            Password : "C345C040D4FF594773BFE3A97B15895B1ADF",
-            port: 2525,
-            To : 'info@pplecert.org',
-            From : email,
+            Host : "email-smtp.us-west-2.amazonaws.com",
+            Username : "AKIAUUNGZ3BW34JJBC54",
+            Password : "BEkwMnDjg1sUboSuZRqnWXCuiNGStd+2GJIVwcDklZ7t",
+            port: 465,
+            To : 'info@pplcert.org',
+            From : 'info@pplcert.org',
             Subject : "This is the subject",
-            Body : "And this is the body"
+            Body : msg+' Area: '+area
         }).then(function(message){
             alert(message)
+        }).catch(function(err){
+            console.log(err);
         });
+
     }else{
         alert('Please, set your Name, Email and Phone number before!');
     } 
 }
+
+$(document).ready(function(){
+    $('.carousel').carousel()
+});
