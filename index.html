@@ -37,18 +37,21 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+          
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger" href="#about">Database/Home</a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#partners">Partners</a>
+            <a class="nav-link js-scroll-trigger" href="./about/" >About</a>
           </li>
-          <li class="nav-item">
+          
+          <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#media">Featured in media</a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
@@ -59,31 +62,44 @@
 
   <!-- Header -->
   <header class="masthead">
+
+
     <div class="container d-flex h-100 align-items-center">
-      <div class="mx-auto text-center">
-        <h2 class="text-white-50 mx-auto mt-2">Are you</h2>
-        <!-- <h2 class="text-white-50 mx-auto mt-2">medical supply shortages?</h2> -->
-        <h1 class="mx-auto my-0 text-uppercase">dealing</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">with medical supply shortages?</h2>
-        <a href="#about" class="btn btn-secondary js-scroll-trigger">
-          Let's work together
-          <i class="fas fa-hands-helping fa-lg"></i>
-        </a>
+      <div class="mx-auto col-lg-12">
+        <h2 class="text-white-50 mx-auto">Are you dealing with medical supply shortages ?</h2>
+        <br />
+        
+      
+        <div class="form-group d-flex">
+          <input type="text" class="form-control" name="searchProductsTxt" id="searchProductsTxt" placeholder="Find out certified and non-certified products..." />
+          <a href="#" class="btn btn-secondary js-scroll-trigger" onclick="searchProducts()">
+            <i class="fas fa-search fa-lg"></i>
+          </a>
+        </div>
+
+        <div class="results" style="display: none;">
+          <table class="table table-hover table-stripped result_search_table" style="background-color: white; opacity: 0.8;">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Product type</th>
+                <th scope="col">Producer</th>
+                <th scope="col">Image</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+              
       </div>
     </div>
+
   </header>
 
   <!-- About Section -->
   <section id="about" class="about-section text-center" style="padding-top: 0;">
     <div class="container">
-      
-      <div class="row">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe src="https://player.vimeo.com/video/406520072" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-      <hr />
+
       <div class="row">
         <div class="col-lg-12 mx-auto">
           <br /><br />
@@ -111,6 +127,24 @@
                   </ul>
                 </div>
               </div>
+        </div>
+      </div>
+      <hr />
+      <br />
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <p class="text-white-50" style="margin-bottom: 5px;">Want to exchange product quality data with other care facilities</p>
+          <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#careFacilitiesForm">
+            <i class="fas fa-handshake fa-3x"></i>
+          </a>
+          <!-- <iframe class="airtable-embed" src="https://airtable.com/embed/shrSMUqp8JBqSZH4f?backgroundColor=cyan" frameborder="0" onmousewheel="" style="background: transparent; border: 1px solid #ccc;"></iframe> -->
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <p class="text-white-50"  style="margin-bottom: 5px;">Are you a producer and want to include your products in our database?</p>
+          <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#productsForm">
+            <i class="fas fa-check fa-3x"></i>
+          </a>
+          <!-- <iframe class="airtable-embed" src="https://airtable.com/embed/shropybwGUAUTXokG?backgroundColor=cyan" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe> -->
         </div>
       </div>
         <!-- <div class="mx-auto my-0 text-uppercase">
@@ -254,212 +288,6 @@
       </div>
   </section>
 
-  <!-- Media Section -->
-  <section id="media" class="media-section text-center" style="padding: 0 0 0 0;">
-    <br clear="all" />
-    <div class="container">
-      <div class="text-center">
-        <h2 class="alert mb-4">Featured in media</h2>
-      </div>
-      
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-        </ol>
-        <div class="carousel-inner">
-
-          <div class="carousel-item active" onclick="window.location.href='https://www.startuptuesdaythehague.com'">
-            <img class="d-block w-100" src="img/media/Worldstartup.png" alt="Worldstartup">
-            <div class="carousel-caption d-none d-md-block">
-              <h2 class="text-black-50">Worldstartup</h2>
-              <p style="background-color: white; color: black;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae cupiditate vero asperiores quisquam odit officia, voluptatum sint, cumque nostrum iure officiis eius quis laudantium aliquid id, voluptates ipsum omnis dolorum. 
-              </p>
-              <p style="background-color: white; color: black;"> 
-                <i class="fas fa-link"></i>
-                <a href="https://www.startuptuesdaythehague.com">https://www.startuptuesdaythehague.com</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="carousel-item" onclick="window.location.href='https://www.healthvalley.nl/events/winners-of-the-dutch-hack-the-crisis'">
-            <img class="d-block w-100" src="img/media/winners-of-the-dutch-hack-the-crisis.png" alt="Health Valley">
-            <div class="carousel-caption d-none d-md-block">
-              <h2 class="text-black-50"></h2>
-
-              <p style="background-color: white; color: black;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae cupiditate vero asperiores quisquam odit officia, voluptatum sint, cumque nostrum iure officiis eius quis laudantium aliquid id, voluptates ipsum omnis dolorum. 
-              </p>
-              <p style="background-color: white; color: black;"> 
-                <i class="fas fa-link"></i>
-                <a href="https://www.healthvalley.nl/events/winners-of-the-dutch-hack-the-crisis">https://www.healthvalley.nl</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="carousel-item" onclick="window.location.href='https://www.emerce.nl/nieuws/coronahackaton-versneld-vaccin-tot-buurtwinkelapp'">
-            <img class="d-block w-100" src="img/media/coronahackaton-versneld-vaccin-tot-buurtwinkelapp.png" alt="Emerce">
-            <div class="carousel-caption d-none d-md-block">
-              <h2 class="text-black-50"></h2>
-              <p> 
-                <i class="fas fa-link"></i>
-                <a href="https://www.emerce.nl/nieuws/coronahackaton-versneld-vaccin-tot-buurtwinkelapp">https://www.emerce.nl</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="carousel-item" onclick="window.location.href='https://amsterdamsmartcity.com/posts/hackthe-crisis-and-the-winners-are'">
-            <img class="d-block w-100" src="img/media/hackthe-crisis-and-the-winners-are.png" alt="#HacktheCrisis: And the Winners are...">
-            <div class="carousel-caption d-none d-md-block">
-              <h2 class="text-black-50"></h2>
-               
-              <p style="background-color: white; color: black;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, earum quibusdam aspernatur voluptatibus iure nostrum consectetur</p>
-              <p>  
-                <i class="fas fa-link" style="color: black;"></i>
-                <a href="https://amsterdamsmartcity.com/posts/hackthe-crisis-and-the-winners-are">https://amsterdamsmartcity.com</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="carousel-item" onclick="window.location.href='https://qualitybs.wordpress.com/2020/04/13/corona-hackathon-winnaar-pplcert-een-eudamed-in-48-uur/'">
-            <img class="d-block w-100" src="img/media/corona-hackathon-winnaar-pplcert-een-eudamed-in-48-uur.png" alt="qualitybs">
-            <div class="carousel-caption d-none d-md-block">
-              <h2 class="text-black-50"></h2>
-               
-              <p style="background-color: white; color: black;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, earum quibusdam aspernatur voluptatibus iure nostrum consectetur</p>
-              <p>  
-                <i class="fas fa-link" style="color: black;"></i>
-                <a href="https://qualitybs.wordpress.com/2020/04/13/corona-hackathon-winnaar-pplcert-een-eudamed-in-48-uur/">https://qualitybs.wordpress.com</a>
-              </p>
-            </div>
-          </div>
-
-          
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-
-    </div>
-  </section>
-  <hr />
-  <!-- end od Media Section -->
-  <!-- Team Section -->
-  <section id="team" class="team-section text-center" style="padding: 0 0 0 0;">
-    <br clear="all" />
-    <div class="container">
-
-      <div class="text-center">
-        <h3 class="mb-8">Meet the team</h3>
-      </div>
-      <br clear="all" />
-      <div class="row" style="margin: auto;">
-       <!-- Card -->
-        <div class="card col-lg-3 col-md testimonial-card">
-
-          <!-- Background color -->
-          <div class="card-up indigo lighten-1"></div>
-
-          <!-- Avatar -->
-          <div class="avatar mx-auto white">
-            <img src="img/team/dani-garcia.jpg" class="rounded-circle img-fluid" alt="Daniel Garcia">
-          </div>
-
-          <!-- Content -->
-          <div class="card-body">
-            <!-- Name -->
-            <h4 class="card-title">Daniel García</h4>
-            <hr>
-            <!-- Quotation -->
-            <p><i class="fas fa-map-marker-alt"></i>Spain</p>
-          </div>
-
-        </div>
-        <!-- Card -->
-
-        <!-- Card -->
-        <div class="card col-lg-3 col-md testimonial-card">
-
-          <!-- Background color -->
-          <div class="card-up indigo lighten-1"></div>
-
-          <!-- Avatar -->
-          <div class="avatar mx-auto white">
-            <img src="img/team/anouk.png" class="rounded-circle img-fluid" alt="Anouk de Jong">
-          </div>
-
-          <!-- Content -->
-          <div class="card-body">
-            <!-- Name -->
-            <h4 class="card-title">Anouk de Jong</h4>
-            <hr>
-            <!-- Quotation -->
-            <p><i class="fas fa-map-marker-alt"></i>Netherlands</p>
-          </div>
-
-        </div>
-        <!-- Card -->
-
-        <!-- Card -->
-        <div class="card col-lg-3 col-md testimonial-card">
-
-          <!-- Background color -->
-          <div class="card-up indigo lighten-1"></div>
-
-          <!-- Avatar -->
-          <div class="avatar mx-auto white">
-            <img src="img/team/daniel-andrade.png" class="rounded-circle img-fluid" alt="Daniel Andrade">
-          </div>
-
-          <!-- Content -->
-          <div class="card-body">
-            <!-- Name -->
-            <h4 class="card-title">Daniel Andrade</h4>
-            <hr>
-            <!-- Quotation -->
-            <p><i class="fas fa-map-marker-alt"></i>Brazil</p>
-          </div>
-
-        </div>
-        <!-- Card -->
-
-        <!-- Card -->
-        <div class="card col-lg-3 col-md testimonial-card">
-
-          <!-- Background color -->
-          <div class="card-up indigo lighten-1"></div>
-
-          <!-- Avatar -->
-          <div class="avatar mx-auto white">
-            <img src="img/team/rosanne.png" class="rounded-circle img-fluid" alt="Rosanne Klerx">
-          </div>
-
-          <!-- Content -->
-          <div class="card-body">
-            <!-- Name -->
-            <h4 class="card-title">Rosanne Klerx</h4>
-            <hr>
-            <!-- Quotation -->
-            <p><i class="fas fa-map-marker-alt"></i>Netherlands</p>
-          </div>
-
-        </div>
-        <!-- Card -->
-
-        <img src="img/team/winner.png" class="img-fluid mx-auto d-block" width="400px" />
-      </div>
-    </div>
-  </section>
 
   <!-- Contact Section -->
   <section id="contact" class="signup-section" style="padding: 0 0 0 0;">
@@ -618,6 +446,7 @@
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
@@ -628,6 +457,28 @@
   <!-- Custom scripts for this template -->
   <script src="js/grayscale.min.js"></script>
   <script src="js/actions.min.js"></script>
+
+  <!-- Forms to Air Table-->
+  
+  
+  <div class="modal fade" id="careFacilitiesForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrSMUqp8JBqSZH4f?backgroundColor=cyan" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="productsForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shropybwGUAUTXokG?backgroundColor=cyan" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Forms-->
+
 
 </body>
 
