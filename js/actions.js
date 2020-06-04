@@ -1,5 +1,5 @@
-// window.endpoint = "https://api.pplcert.org/api";
-window.endpoint = "http://localhost:8000/api";
+window.endpoint = "https://api.pplcert.org/api";
+// window.endpoint = "http://localhost:8000/api";
 
 var sendmail = function(){
 
