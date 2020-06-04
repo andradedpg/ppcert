@@ -26,10 +26,8 @@ var sendmail = function(){
         $.ajax({
             url: window.endpoint+"/mail/send/contact-mail-site",
             type: "POST",
-            crossDomain: true,
             data: data,
             dataType: "json",
-            xhrFields: {cors: false},
             beforeSend: function(){
                 $('.btnsendmail').html('sending <i class="fas fa-spinner fa-spin"></i>');
             },
