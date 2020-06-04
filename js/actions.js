@@ -1,6 +1,7 @@
-var sendmail = function(){
+// window.endpoint = "https://api.pplcert.org/api";
+window.endpoint = "http://localhost:8000/api";
 
-    $('.btnsendmail').html('..sending');
+var sendmail = function(){
 
     var name     = $('#inputName').val();
     var email    = $('#inputEmail').val();
@@ -10,8 +11,6 @@ var sendmail = function(){
     
     var chk_mail_rec   = $("input[name='check-receive-mail']");
     var chk_mail_allow = $("input[name='check-allow-pplcert']");
-
-    console.log(chk_mail_rec);
     
     if(name != '' && email != '' && phone != ''){
         var data = {
@@ -21,23 +20,31 @@ var sendmail = function(){
             "category":  area,
             "message":   msg,
 
-            "receive_mail":  $(chk_mail_rec).is(':checked') ? 'checked' : 'non',
-            "help_research": $(chk_mail_allow).is(':checked') ? 'checked' : 'non'
+            "receive_mail":  chk_mail_rec.is(':checked') ? 'checked' : 'non',
+            "help_research": chk_mail_allow.is(':checked') ? 'checked' : 'non'
         }
         $.ajax({
-            url: "https://api.pplcert.org/api/mail/send/contact-mail-site",
+            url: window.endpoint+"/mail/send/contact-mail-site",
             type: "POST",
             crossDomain: true,
             data: data,
             dataType: "json",
             xhrFields: {cors: false},
+            beforeSend: function(){
+                $('.btnsendmail').html('sending <i class="fas fa-spinner fa-spin"></i>');
+            },
             success: function (response) {
-                var resp = JSON.parse(response)
-                console.log(resp);
-                $('.btnsendmail').html('Sent! Thankyou');
+                if(response.success){
+                    $('.btnsendmail').html('Sent<i class="fas fa-check"></i> Thank you. ');
+
+                    $('#inputName').val('');
+                    $('#inputEmail').val('');
+                    $('#inputPhone').val('');
+                    $('#inputComments').val('');
+                }
             },
             error: function (xhr, status) {
-                $('.btnsendmail').html('Sent! Thankyou');
+                $('.btnsendmail').html('Sent! Thank you');
             }
         });
 
@@ -51,12 +58,13 @@ var searchProducts = function(){
     //we need serv side solution here :(
     $('.results').show('slow');
     $.ajax({
-        url: "http://localhost:8000/api/airtable/products/search/"+txt,
+        // url: 'https://api.pplcert.org/api/airtable/products/search/'+txt,
+        url: window.endpoint+'/airtable/products/search/'+txt,
         type: 'GET',
         beforeSend: function(){
             var html = '<tr><td colspan="4" style="text-aligin:center">Searching <i class="fas fa-spinner fa-spin"></i></td></tr>';
 
-            $('.result_search_table tbody').append(html);
+            $('.result_search_table tbody').html(html);
         },
         success: function(result){
             $('.result_search_table tbody').html('');
@@ -73,6 +81,10 @@ var searchProducts = function(){
                     html += ' <td><img src="'+img+'" class="img-fluid round" width="80" /></td>\n';
                     html += '</tr>';    
                 });
+
+                html += '<tr>';
+                html += ' <td colspan="4" style="text-align:center"><a href="#">Click here to see all results!</a> <img src="../img/favicon.png" /></td>\n';
+                html += '</tr>';
             }else{
                 html += '<tr>';
                 html += ' <td colspan="4" style="text-align:center">Not matched records found :(</td>\n';
@@ -90,7 +102,29 @@ var searchProducts = function(){
     });
 }
 
-$(document).ready(function(){
-    $('#inputPhone').mask('00-0 0000 0000');   
-    $('.carousel').carousel()
+$(document).ready(function(){   
+    $('.owl-carousel').owlCarousel({
+        nav: false,
+		loop: true,
+		margin:20,
+		autoplay: true,
+		responsive:{
+			0:{
+				items:2,
+				margin: 0
+			},
+			600:{
+				items:3
+			},
+			800:{
+				items:4
+			},
+			992:{
+				items:4
+			},
+			1200:{
+				items:5
+			},
+		}
+    });
 });
