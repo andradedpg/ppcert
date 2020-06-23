@@ -53,6 +53,11 @@ var sendmail = function () {
   }
 };
 
+var clearSearchBox = function () {
+  $(".result_search_table tbody").html("");
+  $(".results").hide();
+  $(".dealing-title").html("Are you dealing with medical supply shortages ?");
+};
 var searchProducts = function () {
   var txt = $("#searchProductsTxt").val();
   //we need serv side solution here :(
@@ -69,6 +74,7 @@ var searchProducts = function () {
     },
     success: function (result) {
       $(".result_search_table tbody").html("");
+      $(".dealing-title").html("");
       var html = "";
 
       if (result.data !== null) {
@@ -78,19 +84,26 @@ var searchProducts = function () {
               ? element.photo
               : "https://www.everywhere.pt/images/no_image.png";
           html += "<tr>";
-          html += " <td>" + element.name + "</td>\n";
-          html += " <td>" + element.type + "</td>\n";
-          html += " <td>" + element.producer + "</td>\n";
+          html +=
+            " <td style='vertical-align: middle;'>" + element.name + "</td>\n";
+          html +=
+            " <td style='vertical-align: middle;'>" + element.type + "</td>\n";
+          html +=
+            " <td style='vertical-align: middle;'>" +
+            element.producer +
+            "</td>\n";
           html +=
             ' <td><img src="' +
             img +
-            '" class="img-fluid round" width="80" /></td>\n';
+            '" class="img-fluid round" style="height:40px;max-width:80px;width: expression(this.width > 80 ? 80: true);" /></td>\n';
           html += "</tr>";
         });
 
         html += "<tr>";
         html +=
-          ' <td colspan="4" style="text-align:center"><a href="#">Click here to see all results!</a> <img src="../img/favicon.png" /></td>\n';
+          ' <td colspan="3" style="text-align:center; vertical-align: middle;"><a href="#">Click here to see all results!</a> <img src="../img/favicon.png" /></td>\n';
+        html +=
+          "<td style='text-align:center;vertical-align: middle;font-size:9px'><a href='#' onclick=\"clearSearchBox()\">clear search</a></td>";
         html += "</tr>";
       } else {
         html += "<tr>";

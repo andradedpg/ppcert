@@ -103,7 +103,7 @@
 }
 
 .masthead h1 {
-  font-family: 'Century Gothic';
+  font-family: "Century Gothic";
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
@@ -117,11 +117,22 @@
   font-size: 1rem;
 }
 
-.masthead input, .masthead select, .masthead textarea {
+.masthead .searchbox {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  top: 10px;
+}
+
+.masthead input,
+.masthead select,
+.masthead textarea {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
   height: auto;
-  font-family: 'Varela Round';
+  font-family: "Varela Round";
   font-size: 80%;
   text-transform: uppercase;
   letter-spacing: 0.15rem;

@@ -13,16 +13,26 @@
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./vendor/owl.carousel/assets/owl.carousel.min.css"/>
+  <link rel="stylesheet" href="./vendor/owl.carousel/assets/owl.carousel.min.css" />
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="css/grayscale.min.css" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170479311-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
+    gtag('config', 'UA-170479311-1');
+  </script>
 </head>
 
 <body id="page-top">
@@ -33,20 +43,22 @@
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <img src="img/logo-wihout-bg.png" width="200px" />
       </a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          
+
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#about">Database/Home</a>
           </li>
-          
+
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="./about/" >About</a>
+            <a class="nav-link js-scroll-trigger" href="./about/">About</a>
           </li>
-          
+
           <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#media">Featured in media</a>
           </li> -->
@@ -65,21 +77,23 @@
   <header class="masthead">
 
 
-    <div class="container d-flex h-100 align-items-center">
-      <div class="mx-auto col-lg-12">
-        <h2 class="text-white-50 mx-auto">Are you dealing with medical supply shortages ?</h2>
+    <div class="container d-flex h-100 align-items-center" style="margin-bottom: 40px;">
+      <div class="mx-auto col-lg-12 searchbox">
+        <h2 class="text-white-50 mx-auto dealing-title">Are you dealing with medical supply shortages ?</h2>
         <br />
-        
-      
+
+
         <div class="form-group d-flex">
-          <input type="text" class="form-control" name="searchProductsTxt" id="searchProductsTxt" placeholder="Type mask, face shield, KN95, ..." />
+          <input type="text" class="form-control" name="searchProductsTxt" id="searchProductsTxt"
+            placeholder="Type mask, face shield, KN95, ..." />
           <a href="#" class="btn btn-secondary js-scroll-trigger" onclick="searchProducts()">
             <i class="fas fa-search fa-lg"></i>
           </a>
         </div>
 
         <div class="results" style="display: none;">
-          <table class="table table-hover table-stripped result_search_table" style="background-color: white; opacity: 0.8;">
+          <table class="table table-hover table-stripped result_search_table"
+            style="background-color: white; opacity: 0.8;">
             <thead>
               <tr>
                 <th scope="col">Name</th>
@@ -91,7 +105,7 @@
             <tbody></tbody>
           </table>
         </div>
-              
+
       </div>
     </div>
 
@@ -106,49 +120,60 @@
           <br /><br />
           <h2 class="text-white mb-4">Research and development</h2>
           <p class="text-white-50">
-            These are times of crisis. Around the world there are stories of battles for mouth masks, multiple patients on air ventilators due to lack of supply and PPE shortages restricting the sick seeing their relatives. Motivated to make a difference, the PplCert team is researching how to help fight COVID-19 using digital solutions.
-            </p> 
-              
-              <p class="text-white-50" style="margin: 0 0 0 0;">The PpICert team aim to help with changing the:</p>
-              
-              <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                  <ul class="list-group fa-ul">
-                    <li class="list-group-item borderless" style="text-align: left;"><span class="fa-li"><i class="fas fa-search-dollar"></i></span>Abundance of product offers</li>
-                    <li class="list-group-item borderless" style="text-align: left;"><span class="fa-li"><i class="fas fa-certificate"></i></span>Lack of product certification</li>
-                    <li class="list-group-item borderless" style="text-align: left;"><span class="fa-li"><i class="fas fa-exclamation-triangle"></i></span>Unstable supply & resource market</li>
-                  </ul>
-                </div>
+            These are times of crisis. Around the world there are stories of battles for mouth masks, multiple patients
+            on air ventilators due to lack of supply and PPE shortages restricting the sick seeing their relatives.
+            Motivated to make a difference, the PplCert team is researching how to help fight COVID-19 using digital
+            solutions.
+          </p>
 
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                  <ul class="list-group fa-ul">
-                    <li class="list-group-item borderless" style="text-align: left;"><span class="fa-li"><i class="fas fa-truck"></i></span>Changing logistical barriers</li>
-                    <li class="list-group-item borderless" style="text-align: left;"><span class="fa-li"><i class="fas fa-check-square"></i></span>Short decision-making timeframe</li>
-                    <li class="list-group-item borderless" style="text-align: left;"><span class="fa-li"><i class="fas fa-info-circle"></i></span>Information silos</li>
-                  </ul>
-                </div>
-              </div>
+          <p class="text-white-50" style="margin: 0 0 0 0;">The PpICert team aim to help with changing the:</p>
+
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <ul class="list-group fa-ul">
+                <li class="list-group-item borderless" style="text-align: left;"><span class="fa-li"><i
+                      class="fas fa-search-dollar"></i></span>Abundance of product offers</li>
+                <li class="list-group-item borderless" style="text-align: left;"><span class="fa-li"><i
+                      class="fas fa-certificate"></i></span>Lack of product certification</li>
+                <li class="list-group-item borderless" style="text-align: left;"><span class="fa-li"><i
+                      class="fas fa-exclamation-triangle"></i></span>Unstable supply & resource market</li>
+              </ul>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <ul class="list-group fa-ul">
+                <li class="list-group-item borderless" style="text-align: left;"><span class="fa-li"><i
+                      class="fas fa-truck"></i></span>Changing logistical barriers</li>
+                <li class="list-group-item borderless" style="text-align: left;"><span class="fa-li"><i
+                      class="fas fa-check-square"></i></span>Short decision-making timeframe</li>
+                <li class="list-group-item borderless" style="text-align: left;"><span class="fa-li"><i
+                      class="fas fa-info-circle"></i></span>Information silos</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <hr />
       <br />
       <div class="row">
         <div class="col-lg-6 col-sm-12">
-          <p class="text-white-50" style="margin-bottom: 5px;">Want to exchange product quality data with other care facilities</p>
+          <p class="text-white-50" style="margin-bottom: 5px;">Want to exchange product quality data with other care
+            facilities</p>
           <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#careFacilitiesForm">
             <i class="fas fa-handshake fa-3x"></i>
           </a>
           <!-- <iframe class="airtable-embed" src="https://airtable.com/embed/shrSMUqp8JBqSZH4f?backgroundColor=cyan" frameborder="0" onmousewheel="" style="background: transparent; border: 1px solid #ccc;"></iframe> -->
         </div>
         <div class="col-lg-6 col-sm-12">
-          <p class="text-white-50"  style="margin-bottom: 5px;">Are you a producer and want to include your products in our database?</p>
+          <p class="text-white-50" style="margin-bottom: 5px;">Are you a producer and want to include your products in
+            our database?</p>
           <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#productsForm">
             <i class="fas fa-check fa-3x"></i>
           </a>
           <!-- <iframe class="airtable-embed" src="https://airtable.com/embed/shropybwGUAUTXokG?backgroundColor=cyan" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe> -->
         </div>
       </div>
-        <!-- <div class="mx-auto my-0 text-uppercase">
+      <!-- <div class="mx-auto my-0 text-uppercase">
           How to improve the deal key points and develop solutions that help in:
         </div>
         <br clear="all" />
@@ -186,23 +211,27 @@
       <div class="text-center">
         <h2 class="alert mb-4">Partners in research</h2>
       </div>
-      
+
       <div class="row owl-carousel owl-theme">
         <div class="align-self-center"> <img src="./img/partners/___Hackthecrisis.png" alt="Hackthecrisis - NL"></div>
         <div class="align-self-center"> <img src="./img/partners/___Innofest.png" alt="Innofest"></div>
-        <div class="align-self-center"> <img src="./img/partners/___Spark-optimus-colour.png" alt="Spark Optimus"> </div>
+        <div class="align-self-center"> <img src="./img/partners/___Spark-optimus-colour.png" alt="Spark Optimus">
+        </div>
       </div>
       <!-- Featured Project Row -->
-      
+
 
       <div class="row">
         <div class="col-12">
           <ul class="list-group">
             <li class="list-group-item list-group-item-action">Are you dealing with medical supply shortages?</li>
-            <li class="list-group-item list-group-item-action">Want to know how others are assesing (non)certified products?</li>
+            <li class="list-group-item list-group-item-action">Want to know how others are assesing (non)certified
+              products?</li>
             <li class="list-group-item list-group-item-action">Do you want more transparency on product quality?</li>
-            <li class="list-group-item list-group-item-action">Is your supply buying team strained in human and physical resources?</li>
-            <li class="list-group-item list-group-item-action">Are supplier-procurement relationships changing too fast?</li>
+            <li class="list-group-item list-group-item-action">Is your supply buying team strained in human and physical
+              resources?</li>
+            <li class="list-group-item list-group-item-action">Are supplier-procurement relationships changing too fast?
+            </li>
           </ul>
         </div>
         <div class="col-md-12 col-lg-12 mx-auto text-center">
@@ -219,86 +248,83 @@
   <section id="contact" class="signup-section" style="padding: 0 0 0 0;">
     <br clear="all" />
     <div class="container">
-        <br class="clear" />
-        <div class="col-md-10 col-lg-8 mx-auto text-center">
-          <h2 class="text-white mb-5">Please join us in our research and development</h2>
+      <br class="clear" />
+      <div class="col-md-10 col-lg-8 mx-auto text-center">
+        <h2 class="text-white mb-5">Please join us in our research and development</h2>
 
-          <form class="form">
-            <div class="row">
-              <div class="form-group col-lg-4 col-md">
-                <input type="text" class="form-control" id="inputName" placeholder="Your name...">
-              </div>
-              <div class="form-group col-lg-4 col-md">
-                <input type="email" class="form-control" id="inputEmail" placeholder="your@email.com">
-              </div>
-              <div class="form-group col-lg-4 col-md">
-                <input type="tel" class="form-control" id="inputPhone" placeholder="Phone number...">
-              </div>
+        <form class="form">
+          <div class="row">
+            <div class="form-group col-lg-4 col-md">
+              <input type="text" class="form-control" id="inputName" placeholder="Your name...">
             </div>
-            
-            <div class="row">
-              <div class="form-group col-lg-12 col-md">
-                <textarea id="inputComments" class="form-control"></textarea>
-              </div>
-              
-              <div class="form-group col-lg-12 col-md">
-                <label for="inputArea" style="color: white;">I am involved in the following</label>
-                <select id="inputArea" class="form-control">
-                  <option value="HOSPITAL-AND-CLICNICS">Hospital and Clinics</option>
-                  <option value="CARE-FACILITIES">Care facilities</option>
-                  <option value="ASSOCIATION">Professional Associations</option>
-                  <option value="LOGISTC">Logistics</option>
-                  <option value="PHARMACY">Pharmaceutical Industry</option>
-                  <option value="GOVERNMENT">Government initiatives</option>
-                  <option value="OTHERS">Others</option>
-                </select>
-              </div>
+            <div class="form-group col-lg-4 col-md">
+              <input type="email" class="form-control" id="inputEmail" placeholder="your@email.com">
+            </div>
+            <div class="form-group col-lg-4 col-md">
+              <input type="tel" class="form-control" id="inputPhone" placeholder="Phone number...">
+            </div>
+          </div>
 
-              <div class="form-group col-lg-12 col-md">
-                <!-- <label></label> -->
-                <!-- <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" />
+          <div class="row">
+            <div class="form-group col-lg-12 col-md">
+              <textarea id="inputComments" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group col-lg-12 col-md">
+              <label for="inputArea" style="color: white;">I am involved in the following</label>
+              <select id="inputArea" class="form-control">
+                <option value="HOSPITAL-AND-CLICNICS">Hospital and Clinics</option>
+                <option value="CARE-FACILITIES">Care facilities</option>
+                <option value="ASSOCIATION">Professional Associations</option>
+                <option value="LOGISTC">Logistics</option>
+                <option value="PHARMACY">Pharmaceutical Industry</option>
+                <option value="GOVERNMENT">Government initiatives</option>
+                <option value="OTHERS">Others</option>
+              </select>
+            </div>
+
+            <div class="form-group col-lg-12 col-md">
+              <!-- <label></label> -->
+              <!-- <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" />
                 <label for="checkbox-1-1">Yes. I agree about it terms and conditions of my data</label>
                  -->
-                <!-- <input type="checkbox" name="checkTerms" class="regular-checkbox" id="checkTerms" value="yes" /> -->
+              <!-- <input type="checkbox" name="checkTerms" class="regular-checkbox" id="checkTerms" value="yes" /> -->
 
-                <div id="check-awesome" class="form-group">    
-                  <input type="checkbox" name="check-receive-mail" id="check-receive-mail">  
-              
-                  <label for="check-receive-mail">
-                      <span class="circle"></span>
-                      <span class="check"></span>
-                      <span class="box"></span>
-                      Yes, I want to receive email updates on from the PpICert team. 
-                  </label>  
-                </div>
-                
-                <div id="check-awesome" class="form-group">    
-                  <input type="checkbox" name="check-allow-pplcert" id="check-allow-pplcert">  
-              
-                  <label for="check-allow-pplcert">
-                      <span class="circle"></span>
-                      <span class="check"></span>
-                      <span class="box"></span>
-                      Yes, I want to help PpICert with research (Short interviews, etc) 
-                  </label>  
-                </div>
+              <div id="check-awesome" class="form-group">
+                <input type="checkbox" name="check-receive-mail" id="check-receive-mail">
+
+                <label for="check-receive-mail">
+                  <span class="circle"></span>
+                  <span class="check"></span>
+                  <span class="box"></span>
+                  Yes, I want to receive email updates on from the PpICert team.
+                </label>
               </div>
 
-              <div class="form-group col-lg-12 col-md">
-                <button type="button" 
-                        class="btn btn-secondary col-12 btnsendmail g-recaptcha"
-                        data-sitekey="6LfyGAAVAAAAAA3THfG8rOiRgHPxQ1SMFFdLWQjB" 
-                        data-callback='onSubmitFormContact' 
-                        data-action='submit'
-                        onclick="sendmail()">
-                        
-                        Submit
-                  <i class="far fa-paper-plane"></i>
-                </button>
+              <div id="check-awesome" class="form-group">
+                <input type="checkbox" name="check-allow-pplcert" id="check-allow-pplcert">
+
+                <label for="check-allow-pplcert">
+                  <span class="circle"></span>
+                  <span class="check"></span>
+                  <span class="box"></span>
+                  Yes, I want to help PpICert with research (Short interviews, etc)
+                </label>
               </div>
             </div>
-          </form>
-        </div>
+
+            <div class="form-group col-lg-12 col-md">
+              <button type="button" class="btn btn-secondary col-12 btnsendmail g-recaptcha"
+                data-sitekey="6LfyGAAVAAAAAA3THfG8rOiRgHPxQ1SMFFdLWQjB" data-callback='onSubmitFormContact'
+                data-action='submit' onclick="sendmail()">
+
+                Submit
+                <i class="far fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <br clear="all" />
   </section>
@@ -372,7 +398,7 @@
     <br clear="all" />
     <div class="container">
       <p>info@pplcert.org</p>
-      Copyright &copy; PplCert 2020 
+      Copyright &copy; PplCert 2020
     </div>
   </footer>
 
@@ -392,7 +418,7 @@
       document.getElementById("demo-form").submit();
     }
   </script>
-  
+
   <!-- <script src="https://sdk.amazonaws.com/js/aws-sdk-2.669.0.min.js"></script> -->
 
   <!-- Custom scripts for this template -->
@@ -400,20 +426,26 @@
   <script src="js/actions.min.js"></script>
 
   <!-- Forms to Air Table-->
-  
-  
-  <div class="modal fade" id="careFacilitiesForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+
+  <div class="modal fade" id="careFacilitiesForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shrSMUqp8JBqSZH4f?backgroundColor=cyan" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrSMUqp8JBqSZH4f?backgroundColor=cyan"
+          frameborder="0" onmousewheel="" width="100%" height="533"
+          style="background: transparent; border: 1px solid #ccc;"></iframe>
       </div>
     </div>
   </div>
 
-  <div class="modal fade" id="productsForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="productsForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shropybwGUAUTXokG?backgroundColor=cyan" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shropybwGUAUTXokG?backgroundColor=cyan"
+          frameborder="0" onmousewheel="" width="100%" height="533"
+          style="background: transparent; border: 1px solid #ccc;"></iframe>
       </div>
     </div>
   </div>
